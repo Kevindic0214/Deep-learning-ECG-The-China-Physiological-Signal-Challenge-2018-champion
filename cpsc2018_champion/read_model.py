@@ -50,7 +50,7 @@ def f1(y_true, y_pred):
     f1_val = 2 * precision * recall / (precision + recall + K.epsilon())
     return tf.reduce_mean(f1_val)
 
-model = load_model("CPSC2018_10_fold_model_V5_3", custom_objects={
+model = load_model('CPSC2018_10_fold_model_0', custom_objects={
     'AttentionWithContext': AttentionWithContext,
     'f1': f1
 })
